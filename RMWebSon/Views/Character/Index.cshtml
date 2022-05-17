@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Concrete
+@model List<Character>
+
+@{
+    Layout = "_Layout";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+
+<table class="d-lg-table">
+    <tr>
+        <th>CharacterID</th>
+        <th>CharacterName</th>
+        <th>CharacterStatus</th>
+        <th>CharacterSpecies</th>
+        <th>CharacterType</th>
+        <th>CharacterGender</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CharacterID</td>
+            <td>@item.CharacterName</td>
+            <td>@item.CharacterStatus</td>
+            <td>@item.CharacterSpecies</td>
+            <td>@item.CharacterType</td>
+            <td>@item.CharacterGender</td>
+            <td><a href="#" class="btn btn-danger">Clear</a></td>
+        </tr>
+    }
+</table>
